@@ -20,3 +20,6 @@ for _ in range(N):
     stairs.append(int(input().strip()))
 
 solve(stairs,N)
+
+##리스트 뒤집기
+# [::-1]

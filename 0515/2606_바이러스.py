@@ -23,3 +23,5 @@ def find(dic,infected):
 check = []
 find(dic,1)
 print(len(check)-1)
+
+

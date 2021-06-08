@@ -29,3 +29,5 @@ for i in range(T):
     N = int(input())
     tmp = fibonachi(N)
     print(str(tmp[0])+' '+ str(tmp[1]))
+
+
