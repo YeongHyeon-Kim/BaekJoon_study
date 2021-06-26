@@ -23,6 +23,7 @@ for _ in range(T):
             left.append(pw)
     
     left.extend(right[::-1])
+    ##+했을때 안했을때
     print(''.join(left))
 
 

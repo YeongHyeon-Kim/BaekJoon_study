@@ -14,10 +14,17 @@ for i in range(N):
 now = 0
 cnt = 0
 
-for i in range(len(coin)-1,-1,-1):
-    if (coin[i]+now) <= K:
-        tmp = (K-now)//coin[i]
-        now += coin[i]*tmp
+for i in coin[::-1]:
+    
+    if (i+now) <= K:
+        
+        tmp = (K-now)//i
+        
+        now += i*tmp
+        
         cnt+= tmp
 
 print(cnt)
+
+
+#변수 줄여서 해보기

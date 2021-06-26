@@ -5,7 +5,7 @@ M,N = map(int, input().strip().split())
 
 
 def isPrime(M,N):
-    check = [True] *(N+1)
+    check = [True] * (N+1)
     check[1] = False
     m = int(N**0.5)
     for i in range(2,m+1):

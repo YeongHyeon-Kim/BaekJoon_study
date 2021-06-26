@@ -20,7 +20,9 @@ for i in range(M):
     a, b = map(int, input().strip().split())
     graph[a].append(b)
     graph[b].append(a)
+
 count = 0
+
 for i in range(1,N+1):
     if not visited[i]:
         dfs(i)

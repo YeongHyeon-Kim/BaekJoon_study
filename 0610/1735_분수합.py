@@ -12,5 +12,7 @@ GCD = gcd(A,B)
 B = int(B/GCD)
 A = int(A/GCD)
 
-print(B, end=' ')
-print(A)
+print(A, end=' ')
+print(B)
+
+##다른방법으로 푼 사람 있는지 확인하기

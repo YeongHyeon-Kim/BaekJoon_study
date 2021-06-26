@@ -26,7 +26,7 @@ def count_vi(graph,visited):
                     del queue[0]
                     for k in range(4):
                         x = a+dx[k]
-                        y = b + dy[k]
+                        y = b+dy[k]
                         if  0<=x<N and 0<=y<M and new_graph[x][y] == 0:
                             new_graph[x][y] = 3
                             queue.append([x,y])
@@ -48,7 +48,6 @@ def setWall(start, depth):
     if depth ==3:
         cnt = max(cnt, count_vi(graph,visited))
         return
-    
     for i in range(start, N*M):
         x = i //M
         y = i % M
