@@ -23,6 +23,7 @@ def change(k,l,graph):
                 else:
                     graph[k+i][l+j] = 1
     return graph
+
 cnt = 0
 def solve(N,M,A,B):
     global cnt

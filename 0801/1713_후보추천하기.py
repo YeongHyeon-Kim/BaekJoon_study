@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 input=sys.stdin.readline
 
 N = int(input())
@@ -18,11 +17,14 @@ for i in range(num):
             chu_num[chuchu] +=1
     else:
         if chuchu not in chu_num:
+            
             for j in range(-2,-N-1,-1): #없앨꺼 결정하기
                 if chu_num[list(chu_num.keys())[j+1]] != chu_num[list(chu_num.keys())[j]]:
                     chu_num.pop(list(chu_num.keys())[j+1])
+                    #del 로 지울것
                     chu_num[chuchu] = 1
                     break
+            
             else:# 다 똑같으면 맨 앞에꺼 제거
                 chu_num.pop(list(chu_num.keys())[0])
                 chu_num[chuchu] = 1
@@ -31,6 +33,3 @@ for i in range(num):
     chu_num = dict(sorted(chu_num.items(), key= lambda x : x[1], reverse=True))
 print(*sorted(chu_num.keys()))
 
-a = {1:2, 2:4, 6:7}
-if 2 in a:
-    print(a)

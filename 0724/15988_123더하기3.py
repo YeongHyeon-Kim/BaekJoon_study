@@ -10,7 +10,7 @@ memo[1] = 1
 memo[2] = 2
 memo[3] = 4
 
-for i in range(4,1000000):
+for i in range(4,1000001):
     memo[i] = memo[i-1]%1000000009 + memo[i-2]%1000000009 + memo[i-3]%1000000009
 
 
@@ -24,6 +24,7 @@ for i in range(4,1000000):
 for _ in range(T):
     n = int(input())
     print(memo[n]%1000000009)
+    
     # if n in memo:
     #     print(memo[n])
     # else:

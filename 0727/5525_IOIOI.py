@@ -80,5 +80,9 @@ for s in S:
             else:
                 tmp+=1
                 before = s
+#스위치는 O일때만 스위치 종료하면 
+
+
 print(cnt)
+
 
