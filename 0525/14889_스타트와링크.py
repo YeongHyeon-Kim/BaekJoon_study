@@ -8,13 +8,6 @@ for i in range(N):
 
 check = [False]*N
 result = []
-def solve(depth,N,M):
-    if depth == M//2:
-        result.append()
-    else:
-        for i in range(1,N+1):
-            if not check[i-1]:
-                
 
 def solve(depth,N,M):
     if depth == M:
