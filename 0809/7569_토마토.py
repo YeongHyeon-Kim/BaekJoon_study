@@ -25,6 +25,7 @@ dy = [0,0,-1,1]
 
 check_cnt = 0
 day = 0
+## while 2개로 바꿔보기
 def BFS(start,box):
     global check_cnt
     global day
@@ -47,7 +48,7 @@ def BFS(start,box):
                     box[new_i][j][k] = 1
                     check_cnt +=1
                     new_start.append([new_i,j,k])
-    start = deepcopy(new_start)
+    start = new_start.copy()
     if len(start) != 0:
         day +=1
         BFS(start,box)

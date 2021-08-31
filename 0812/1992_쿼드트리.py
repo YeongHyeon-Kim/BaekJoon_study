@@ -37,7 +37,6 @@ jido = [list(map(int, input().strip().split())) for _ in range(N)]
 def quadtree(x,y,n):
     if n ==1:
         return str(jido[x][y])
-
     result = []
     for i in range(x,x+n):
         for j in range(y, y+n):
