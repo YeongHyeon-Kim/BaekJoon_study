@@ -23,3 +23,6 @@ for i in range(N):
         heapq.heappush(heap, input_check)
         
         heapq.heappush(check[input_check], input_)
+
+
+### heapq 공부해보기

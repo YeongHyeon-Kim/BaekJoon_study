@@ -13,12 +13,10 @@ while (start <= end):
     mid = (start+end)//2
     count = 1 #first에 지을수 있으니
     first = house[0]
-
     for i in range(1, len(house)):
         if house[i] >= first+mid:# 좌표값 + mid(최대거리) --> 공유기 설치 가능 지역
             count+=1
             first = house[i] # 다음집으로 변경
-
     if count >= C: # 현재 mid값으로는 공유기 모두 설치 가능 --> 거리를 더 크게
         start = mid + 1 #다음 while에서 현재 mid 는 볼 필요가 없으니 +1로 더 크게 시작
         result = mid
