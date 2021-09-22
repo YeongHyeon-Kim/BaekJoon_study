@@ -1,5 +1,5 @@
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline
 
 
 # N, M, K = map(int, input().strip().split())
@@ -95,6 +95,8 @@ input = sys.stdin.readline
 # else:
 #     print(dp[px][py] * dp[n - px + 1][m - py + 1])
 
+import sys
+input = sys.stdin.readline
 
 N, M, K = map(int, input().strip().split())
 
@@ -107,21 +109,24 @@ if K == 0:
             table[i][j] = table[i][j-1] + table[i-1][j]
     print(table[-1][-1])
 else:
-    k_row = K//M
-    k_col = K % M
+    k_row = (K-1)//M
+    k_col = (K-1) % M
 
 # 테이블 2개 만들꺼임
-    table = [[0 for _ in range(k_col+1)] for __ in range(k_row+2)]
+    table = [[0 for _ in range(k_col+2)] for __ in range(k_row+2)]
+
     table[0][1] = 1
     for i in range(1, k_row+2):
-        for j in range(1, k_col+1):
+        for j in range(1, k_col+2):
             table[i][j] = table[i][j-1] + table[i-1][j]
+
     before_k = table[-1][-1]
 
-    table = [[0 for _ in range(k_col, M+2)] for __ in range(k_row, N+1)]
+    table = [[0 for _ in range(k_col, M+1)] for __ in range(k_row, N+1)]
+
     table[0][1] = 1
     for i in range(1, N-k_row+1):
-        for j in range(1, M-k_col+2):
+        for j in range(1, M-k_col+1):
             table[i][j] = table[i][j-1] + table[i-1][j]
     after_k = table[-1][-1]
 
