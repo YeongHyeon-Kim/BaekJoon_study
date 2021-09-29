@@ -1,2 +1,2 @@
-  echo .DS_Store >> .gitignore
-  .1918_후위표기식.py
+.DS_Store
+.1918_후위표기식.py
