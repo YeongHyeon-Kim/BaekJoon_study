@@ -27,7 +27,6 @@ def BFS(y, x):
                     visited[new_y][new_x] = True
                     if graph[new_y][new_x] == 1:
                         q.append([new_x, new_y])
-
     return now_area
 
 
