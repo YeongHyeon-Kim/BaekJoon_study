@@ -22,10 +22,8 @@ for i in node:
     if del_node in node[i]:
         node[i].remove(del_node)
 
-
 count = 0
 visited = [False]*N
-
 
 def DFS_count(child):
     global count
@@ -38,8 +36,11 @@ def DFS_count(child):
                 visited[i] = True
                 DFS_count(i)
 
-
 if root in node:
     DFS_count(root)
 
 print(count)
+
+
+#유니온 파인드
+# 같은 집합에 속하는건지
